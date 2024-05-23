@@ -17,6 +17,9 @@
     text-transform: capitalize;
     transition: all .2s linear;
 }
+body{
+    background-color: var(--light-color);
+}
 
 html{
     font-size: 62.5%;
@@ -86,6 +89,51 @@ header .icons #menu-bars{
     display: none;
 }
 
+.home{
+    padding: 0;
+}
+
+.home .box#box1{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important; 
+    justify-content: flex-end;
+    padding: 2rem 9%;
+}
+.home .box#box1{
+    background-image: url(gambar/avatar-the-way-of-water-avatar-2-2022-movies-sam-8000x5000-8963.jpg);
+}
+.home .box#box2{
+    background-image: url(gambar/doraemon-4k.jpg);
+}
+
+.home .box{
+    justify-content: flex-start;
+}
+
+.home .box.second{
+    justify-content: flex-end;
+}
+
+.home .box .content{
+    width: 50rem;
+}
+
+.home .box .content h3{
+    font-size: 6rem;
+    color: #fff;
+    padding-top: .5rem;
+    text-transform: uppercase;
+}
+
+.home .box .content p{
+    line-height: 2;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+}
 
 
 
@@ -132,7 +180,7 @@ header .icons #menu-bars{
         padding: 1rem;
         clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
     }
-    header .navbar .active{
+    header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     header .navbar a{
