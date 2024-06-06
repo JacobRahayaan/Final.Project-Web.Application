@@ -1,3 +1,14 @@
+<?php
+require 'functions.php';
+session_start();
+if (!isset($_SESSION['Login'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$anime = query(" SELECT * FROM movie WHERE jenis_film='anime' ");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +45,7 @@
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
             <i class="fas fa-search" id="search-icon"></i>
-            <a href="#" class="fas solid fa-user"></a>
+            <a href="logout.php" class="fas solid fa-user"></a>
         </div>
     </header>
     
@@ -103,16 +114,20 @@
     <h1 class="heading">Popular on Anime</h1>
     <div class="swiper anime-slider">
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-                <div class="box" style="background: url(gambar/mission-impossible.jpg) no-repeat;"></div>
+            <?php $i = 1; ?>
+            <?php foreach( $anime as $row ) : ?>
+                <div class="swiper-slide">
+                <div class="box" style="background: url(gambar/<?= $row["gambar"]; ?>) no-repeat;"></div>
                 <div class="content">
-                    <h3>Naruto</h3>
-                    <p>Guided by the spirit demon within him, orphaned Naruto learns
-                    to harness his powers as a ninja in this anime adventure series.</p>
+                    <h3><?= $row["judul"]; ?></h3>
+                    <p><?= $row["sinopsis_singkat"]; ?></p>
                     <a href="#" class="btn">See More</a>
                 </div>
             </div>
+            <?php $i++; ?>
+            <?php endforeach; ?>
+
+            
 
             <div class="swiper-slide">
                 <div class="box" style="background: url(gambar/mission-impossible.jpg) no-repeat;"></div>
