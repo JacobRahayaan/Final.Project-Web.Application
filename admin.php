@@ -1,5 +1,12 @@
 <?php 
 require 'functions.php';
+
+session_start();
+if (!isset($_SESSION['Login'])) {
+    header("Location: login.php");
+    exit;
+}
+
 $movie = query("SELECT * FROM movie");
 
 // tombol cari ditekan
@@ -11,13 +18,14 @@ if( isset($_POST["cari"]) ) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="admin.css">
 	<title>Halaman Admin</title>
 </head>
 <body>
 
 <h1>Daftar Film</h1>
 
-<a href="tambah.php">Tambah data film</a>
+<a href="tambah.php" class="button">Tambah data film</a>
 <br><br>
 
 <form action="" method="post">

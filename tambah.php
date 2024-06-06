@@ -27,6 +27,7 @@ if( isset($_POST["submit"]) ) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="admin.css">
 	<title>Tambah data film</title>
 </head>
 <body>
@@ -42,7 +43,7 @@ if( isset($_POST["submit"]) ) {
                 <label for="jenis_film">Jenis film : </label> <br>
                 <select name="jenis_film" id="jenis_film">
                     <option value="anime">Anime</option>
-                    <option value="actiom">Action</option>
+                    <option value="action">Action</option>
                     <option value="family">Family</option>
                 </select>
             </li>

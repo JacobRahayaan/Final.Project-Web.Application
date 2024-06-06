@@ -2,7 +2,7 @@
 session_start();
 
 if( isset($_SESSION["Login"]) ){
-    header("Location: index.php");
+    header("Location: admin.php");
     exit;
 }
 
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $user;
             echo "Login successful!";
             // Redirect or perform further actions
-            header("Location: index.php");
+            header("Location: admin.php");
             exit;
         } else {
             echo "Invalid password.";
@@ -59,7 +59,7 @@ $conn->close();
     <title>Login</title>
 </head>
 <body>
-    <h2>Login</h2>
+    <h2>Login or Admin</h2>
     <form action="" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
