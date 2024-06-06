@@ -25,7 +25,7 @@ $mvi = query("SELECT * FROM movie WHERE id = $id")[0];
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="detail.css">
 
 </head>
 
@@ -35,11 +35,10 @@ $mvi = query("SELECT * FROM movie WHERE id = $id")[0];
     <header>
         <a href="#" class="logo"><i class="fas fa-infinity"></i>Movie.</a>
         <nav class="navbar">
-             <a href="index.html">home</a>
-             <a href="#anime">anime</a>
-             <a href="#action">action</a>
-             <a href="#child">child</a>
-             <a href="#family">family</a>
+            <a href="index.php">home</a>
+            <a href="index.php#anime">anime</a>
+            <a href="index.php#action">action</a>
+            <a href="index.php#child">child</a>
         </nav>
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>

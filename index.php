@@ -34,11 +34,11 @@ $family = query(" SELECT * FROM movie WHERE jenis_film='family' ");
     <header>
         <a href="#" class="logo"><i class="fas fa-infinity"></i>Movie.</a>
         <nav class="navbar">
-             <a href="index.html">home</a>
-             <a href="#anime">anime</a>
-             <a href="#action">action</a>
-             <a href="#child">child</a>
-             <a href="#family">family</a>
+             <a href="index.php">home</a>
+             <a href="index.php#anime">anime</a>
+             <a href="index.php#action">action</a>
+             <a href="index.php#child">child</a>
+            
         </nav>
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
