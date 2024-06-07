@@ -56,10 +56,12 @@ $conn->close();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
 <body>
-    <h2>Login or Admin</h2>
+<div class="login">
+    <h2>Login for Admin</h2>
     <form action="" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
@@ -67,9 +69,9 @@ $conn->close();
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
         
-        <button type="submit">Login</button>
+        <button class="button" type="submit">Login</button>
     </form>
 
-    <a href="registrasi.php">Register</a>
+</div>
 </body>
 </html>

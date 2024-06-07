@@ -26,6 +26,7 @@ if( isset($_POST["cari"]) ) {
 <h1>Daftar Film</h1>
 
 <a href="tambah.php" class="button">Tambah data film</a>
+<a href="logout.php" class="button">Keluar</a>
 <br><br>
 
 <form action="" method="post">

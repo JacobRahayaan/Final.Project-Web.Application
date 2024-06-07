@@ -4,7 +4,7 @@ require 'functions.php';
 
 $anime = query(" SELECT * FROM movie WHERE jenis_film='anime' ");
 $action = query(" SELECT * FROM movie WHERE jenis_film='action' ");
-$family = query(" SELECT * FROM movie WHERE jenis_film='family' ");
+$chil = query(" SELECT * FROM movie WHERE jenis_film='family' ");
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +115,7 @@ $family = query(" SELECT * FROM movie WHERE jenis_film='family' ");
             <?php $i = 1; ?>
             <?php foreach( $anime as $row ) : ?>
                 <div class="swiper-slide">
-                    <div class="box" style="background: url(gambar/<?= $row["gambar"]; ?>) 5vh no-repeat;" ></div>
+                    <div class="box" style="background: url(gambar/<?= $row["gambar"]; ?>) no-repeat;" ></div>
                     <div class="content">
                         <h3><?= $row["judul"]; ?></h3>
                         <p><?= $row["sinopsis_singkat"]; ?></p>
@@ -146,7 +146,7 @@ $family = query(" SELECT * FROM movie WHERE jenis_film='family' ");
                     <div class="content">
                         <h3><?= $row["judul"]; ?></h3>
                         <p><?= $row["sinopsis_singkat"]; ?></p>
-                        <a href="#" class="btn">See More</a>
+                        <a href="detail.php?id=<?= $row["id"]; ?>" class="btn">See More</a>
                     </div>
                 </div>
             <?php $i++; ?>
@@ -164,172 +164,26 @@ $family = query(" SELECT * FROM movie WHERE jenis_film='family' ");
     <h1 class="heading">Child Movies</h1>
     <div class="swiper child-slider">
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-                <div class="box" style="background: url(gambar/poster-the-run.jpg) no-repeat"></div>
-                <div class="content">
-                    <h3>Beyblade</h3>
-                    <p>Guided by the spirit demon within him, orphaned Naruto learns
-                    to harness his powers as a ninja in this anime adventure series.</p>
-                    <a href="#" class="btn">See More</a>
+            <?php $i = 1; ?>
+            <?php foreach( $action as $row ) : ?>
+                <div class="swiper-slide">
+                    <div class="box" style="background: url(gambar/<?= $row["gambar"]; ?>)"
+                    style="background-size: 50% 50%"></div>
+                    <div class="content">
+                        <h3><?= $row["judul"]; ?></h3>
+                        <p><?= $row["sinopsis_singkat"]; ?></p>
+                        <a href="detail.php?id=<?= $row["id"]; ?>" class="btn">See More</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="box" style="background: url(img/child-2.jpg) no-repeat"></div>
-                <div class="content">
-                    <h3>Beyblade Burst Turbo</h3>
-                    <p>Guided by the spirit demon within him, orphaned Naruto learns
-                    to harness his powers as a ninja in this anime adventure series.</p>
-                    <a href="#" class="btn">See More</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="box" style="background: url(img/child-3.jpg) no-repeat"></div>
-                <div class="content">
-                    <h3>Bakugan: Battle Planet</h3>
-                    <p>Guided by the spirit demon within him, orphaned Naruto learns
-                    to harness his powers as a ninja in this anime adventure series.</p>
-                    <a href="#" class="btn">See More</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="box" style="background: url(img/child-4.jpg) no-repeat"></div>
-                <div class="content">
-                    <h3>Sonic X</h3>
-                    <p>Guided by the spirit demon within him, orphaned Naruto learns
-                    to harness his powers as a ninja in this anime adventure series.</p>
-                    <a href="#" class="btn">See More</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="box" style="background: url(img/child-5.jpg) no-repeat"></div>
-                <div class="content">
-                    <h3>Yowamushi Pedal</h3>
-                    <p>Guided by the spirit demon within him, orphaned Naruto learns
-                    to harness his powers as a ninja in this anime adventure series.</p>
-                    <a href="#" class="btn">See More</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="box" style="background: url(img/child-6.jpg) no-repeat"></div>
-                <div class="content">
-                    <h3>Shimajiro: A Adventure</h3>
-                    <p>Guided by the spirit demon within him, orphaned Naruto learns
-                    to harness his powers as a ninja in this anime adventure series.</p>
-                    <a href="#" class="btn">See More</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="box" style="background: url(img/child-7.jpg) no-repeat"></div>
-                <div class="content">
-                    <h3>Go Astro Boy Go!</h3>
-                    <p>Guided by the spirit demon within him, orphaned Naruto learns
-                    to harness his powers as a ninja in this anime adventure series.</p>
-                    <a href="#" class="btn">See More</a>
-                </div>
-            </div>
+            <?php $i++; ?>
+            <?php endforeach; ?>
+            
 
         </div>
     </div>
 </section>
 
 
-
-<section class="family" id="family">
-    <h1 class="heading">Family Movies</h1>
-    <div class="swiper family-slider">
-    <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(img/family-1.jpg) no-repeat"></div>
-            <div class="content">
-                <h3>STAND BY ME Doraemon 2</h3>
-                <p>Guided by the spirit demon within him, orphaned Naruto learns
-                to harness his powers as a ninja in this anime adventure series.</p>
-                <a href="#" class="btn">See More</a>
-            </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(img/family-2.jpg) no-repeat"></div>
-            <div class="content">
-                <h3>Pokémon the Movie</h3>
-                <p>Guided by the spirit demon within him, orphaned Naruto learns
-                to harness his powers as a ninja in this anime adventure series.</p>
-                <a href="#" class="btn">See More</a>
-            </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(img/family-3.jpg) no-repeat"></div>
-            <div class="content">
-                <h3>Hows Moving Castle</h3>
-                <p>Guided by the spirit demon within him, orphaned Naruto learns
-                to harness his powers as a ninja in this anime adventure series.</p>
-                <a href="#" class="btn">See More</a>
-            </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(img/family-4.jpg) no-repeat"></div>
-            <div class="content">
-                <h3>Spirited Away</h3>
-                <p>Guided by the spirit demon within him, orphaned Naruto learns
-                to harness his powers as a ninja in this anime adventure series.</p>
-                <a href="#" class="btn">See More</a>
-            </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(img/family-5.jpg) no-repeat"></div>
-            <div class="content">
-                <h3>My Neighbor Totoro</h3>
-                <p>Guided by the spirit demon within him, orphaned Naruto learns
-                to harness his powers as a ninja in this anime adventure series.</p>
-                <a href="#" class="btn">See More</a>
-            </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(img/family-6.jpg) no-repeat"></div>
-            <div class="content">
-                <h3>Kikis Delivery Service</h3>
-                <p>Guided by the spirit demon within him, orphaned Naruto learns
-                to harness his powers as a ninja in this anime adventure series.</p>
-                <a href="#" class="btn">See More</a>
-            </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(img/family-7.jpg) no-repeat"></div>
-            <div class="content">
-                <h3>Ponyo</h3>
-                <p>Guided by the spirit demon within him, orphaned Naruto learns
-                to harness his powers as a ninja in this anime adventure series.</p>
-                <a href="#" class="btn">See More</a>
-            </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(img/family-8.jpg) no-repeat"></div>
-            <div class="content">
-                <h3>Arrietty</h3>
-                <p>Guided by the spirit demon within him, orphaned Naruto learns
-                to harness his powers as a ninja in this anime adventure series.</p>
-                <a href="#" class="btn">See More</a>
-            </div>
-        </div>
-
-
-    </div>
-    </div>
-</section>
 
 
 <div class="copyright container">

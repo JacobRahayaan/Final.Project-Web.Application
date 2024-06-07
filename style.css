@@ -161,20 +161,26 @@ header .icons #menu-bars{
 }
 
 .home .box .content p{
-    line-height: 5;
+    line-height: 2;
     color: #fff;
     font-size: 1.5rem;
     padding: 1rem 0;
 }
 
+.swiper-wrapper {
+    width: 100%;
+    height: 400px;
+  }
+  
+
 .anime{
     padding:5rem;
 }
 
-.anime .background{
-    background-size: 1vh;
-    background-repeat: no-repeat;
-}
+.action .box{
+    width:299px;
+    height:168px;
+ }
 
 .anime .content h3{
     font-size: 1.7rem;
