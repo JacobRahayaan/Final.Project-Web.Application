@@ -4,7 +4,7 @@ require 'functions.php';
 
 $anime = query(" SELECT * FROM movie WHERE jenis_film='anime' ");
 $action = query(" SELECT * FROM movie WHERE jenis_film='action' ");
-$chil = query(" SELECT * FROM movie WHERE jenis_film='family' ");
+$child = query(" SELECT * FROM movie WHERE jenis_film='family' ");
 ?>
 
 <!DOCTYPE html>
@@ -57,10 +57,8 @@ $chil = query(" SELECT * FROM movie WHERE jenis_film='family' ");
                 <div class="box " style="background: url(gambar/avatar-the-way-of-water-avatar-2-2022-movies-sam-8000x5000-8963.jpg) no-repeat;">
                     <div class="content">
                         <h3>Avatar The Way of Water</h3>
-                        <p>High roller Yumeko Jabami plans to clean house at Hyakkaou Private<br>
-                        Academy, a school where students are evaluated solely on their<br>
-                        gambling skills.</p>
-                        <a href="#" class="btn">See More</a>
+                        <p>Jake Suly menjalani kehidupan bahagia di Pandora bersama Neytiri dan dua anak mereka. Sebagai pemimpin suku Na'vi, Jake menghadapi berbagai ancaman, sambil mengajarkan teknik berperang kepada anak-anaknya</p>
+                        <a href="detail.php?id=17" class="btn">See More</a>
                     </div>
                 </div>
             </div>
@@ -68,11 +66,9 @@ $chil = query(" SELECT * FROM movie WHERE jenis_film='family' ");
             <div class="swiper-slide">
                 <div class="box second" style="background: url(gambar/doraemon-4k.jpg) no-repeat;">
                     <div class="content">
-                        <h3>Doraemon</h3>
-                         <p>When a Japanese high schooler comes into possession of a mystical<br>
-                        notebook, he finds he has the power to kill anybody whose name he<br>
-                        enters in it.</p>
-                        <a href="#" class="btn">See More</a>
+                        <h3>Stand By Me Doraemon 2</h3>
+                         <p>Suatu hari Nobita menemukan boneka beruang yang ditambal jahit tangan oleh nenek tercinta. Hal tersebut memicu kenangan mengharukan untuknya dan menanyakan kepada Doraemon apakah mereka dapat menggunakan mesin waktu untuk mengunjungi Nenek di masa lampau</p>
+                        <a href="detail.php?id=18" class="btn">See More</a>
                     </div>
                 </div>
             </div>
@@ -81,21 +77,18 @@ $chil = query(" SELECT * FROM movie WHERE jenis_film='family' ");
                 <div class="box second" style="background: url(gambar/kimi-no-nawa-4k.jpg) no-repeat;">
                     <div class="content">
                         <h3>Kimi no nawa</h3>
-                         <p>The most powerful superhero in the world can kill anyone with one<br>
-                        blow. But nothing can challenge him, so he struggles with ennui and<br>
-                        depression</p>
-                        <a href="#" class="btn">See More</a>
+                         <p>	Dua remaja terhubung melalui mimpi, berusaha bertukar tempat untuk mengubah takdir mereka.</p>
+                        <a href="detail.php?id=25" class="btn">See More</a>
                     </div>
                 </div>
             </div>
 
             <div class="swiper-slide">
-                <div class="box " style="background: url(gambar/mission-impossible.jpg) no-repeat;">
+                <div class="box " style="background: url(gambar/kungfu-panda-4.jpeg) no-repeat;">
                     <div class="content">
                         <h3>Kungfu Panda 4</h3>
-                        <p>Guided by the spirit demon within him, orphaned Naruto learns<br>
-                        to harness his powers as a ninja in this anime adventure series.</p>
-                        <a href="#" class="btn">See More</a>
+                        <p>Po, sang Pendekar Naga telah melalui tiga petualangan menantang maut. Dia mampu mengalahkan penjahat kelas dunia dengan keberaniannya dan juga kemampuan bela diri yang luar biasa.</p>
+                        <a href="detail.php?id=20" class="btn">See More</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +134,7 @@ $chil = query(" SELECT * FROM movie WHERE jenis_film='family' ");
             <?php $i = 1; ?>
             <?php foreach( $action as $row ) : ?>
                 <div class="swiper-slide">
-                    <div class="box" style="background: url(gambar/<?= $row["gambar"]; ?>)"
+                    <div class="box" style="background: url(gambar/<?= $row["gambar"]; ?>) no-repeat"
                     style="background-size: 50% 50%"></div>
                     <div class="content">
                         <h3><?= $row["judul"]; ?></h3>
@@ -165,9 +158,9 @@ $chil = query(" SELECT * FROM movie WHERE jenis_film='family' ");
     <div class="swiper child-slider">
         <div class="swiper-wrapper">
             <?php $i = 1; ?>
-            <?php foreach( $action as $row ) : ?>
+            <?php foreach( $child as $row ) : ?>
                 <div class="swiper-slide">
-                    <div class="box" style="background: url(gambar/<?= $row["gambar"]; ?>)"
+                    <div class="box" style="background: url(gambar/<?= $row["gambar"]; ?>) no-repeat"
                     style="background-size: 50% 50%"></div>
                     <div class="content">
                         <h3><?= $row["judul"]; ?></h3>
@@ -181,6 +174,15 @@ $chil = query(" SELECT * FROM movie WHERE jenis_film='family' ");
 
         </div>
     </div>
+</section>
+
+<section class="about">
+    <h2>Anggota Kelompok</h2>
+    <ul>
+        <p>Jacob Rahayaan (230211060066)</p> <br>
+        <p>Misael Mokansi (230211060049)</p> <br>
+        <p>Lourdes Batjo (230211060070)</p> <br>
+    </ul>
 </section>
 
 
